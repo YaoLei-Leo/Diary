@@ -20,16 +20,16 @@ Skeletal muscle is one of the most metabolically active tissue types with partic
 ### 1. What is mitochondria DNA?
    In general, each human cell contains several hundred to 1,000 mitochondria, and each mitochondrion has 2 to 10 copies of mtDNA [^zhang_high_2015]. Mitochondrial DNA (mtDNA) is a 16,569 bp long, double-stranded supercoiled ring molecule, which does not contain histones. However, it forms a complex with >20 different proteins. Such a spherical nucleoprotein complex 100 nm in diameter is called a nucleoid and contain one or more copy of mtDNA [^ryzhkova_mitochondrial_2018].   Mitochondrial proteins are encoded both by the nuclear genome and their own genome (mtDNA), mitochondrial DNA (mtDNA) is primarily inherited from the maternal line [^bris_bioinformatics_2018]. 
    
-   <p style="text-align:center"><img src="./Mitochondrial%20DNA.jpg"></p>
-   <p style="text-align:center"><i>Mitochondrial in cell</i></p>
+   <p style="text-align:center"><img src="https://raw.githubusercontent.com/YaoLei-Leo/Diary/main/puppy_diary/mitochondrialGenetics/Mitochondrial%20DNA.jpg"></p>
+   <p style="text-align:center">Mitochondrial in cell</p>
    
    Pedigree and phylogenetic analyses have estimated a de novo mtDNA nucleotide substitution rate of ~$10^{-8}$ substitutions per base pair per year. However, from 30,506 samples across the globe, only 2.4% of nucleotides (which is $16500*0.024=396$) show genetic variation with >1% frequency within a population. → The selection might contribute to the non-random distribution of common variants across the mitochondrial genome in the human population [^wei_germline_2019].
 
 ### 2. Macro-haplogroup of mtDNA ([cite from wikipedia](https://en.wikipedia.org/wiki/Macro-haplogroup_L_(mtDNA)))
   In human mitochondrial genetics, **L** is the mitochondrial DNA macro-haplogroup that is at the root of the anatomically modern human (*Homo sapiens*) mtDNA phylogenetic tree. As such, it represents the most ancestral mitochondrial lineage of all currently living modern humans, also dubbed "Mitochondrial Eve".
 
-  <p style="text-align:center"><img src="./Haplo%20group.png"></p>
-  <p style="text-align:center"><i>haplogroup of mitochondria</i></p>
+  <p style="text-align:center"><img src="https://raw.githubusercontent.com/YaoLei-Leo/Diary/main/puppy_diary/mitochondrialGenetics/Haplo%20group.png"></p>
+  <p style="text-align:center">haplogroup of mitochondria</p>
 
 
 ### 3. Pathogenic variants in mtDNA
@@ -40,7 +40,7 @@ Skeletal muscle is one of the most metabolically active tissue types with partic
 ### 4. Homoplasmy and heteroplasmy
   Due to stochastic segregation of mtDNA, the percentage of mutant and normal mtDNAs may drift during cellular divisions, and the percentage of the mutaition load may vary drastically among the different tissues and organs, from 100% mutant load, defining homoplasmy, to the coexistence of mutant and wildtype copies, defining heteroplasmy [^bris_bioinformatics_2018].
 
-  <p style="text-align:center"><img src="./Graphical%20representation%20of%20human%20mitochondrial%20DNA%20variations.png"></p>
+  <p style="text-align:center"><img src="https://raw.githubusercontent.com/YaoLei-Leo/Diary/main/puppy_diary/mitochondrialGenetics/Graphical%20representation%20of%20human%20mitochondrial%20DNA%20variations.png"></p>
   <p style="text-align:center">Graphical representation of human mitochondrial DNA variations. The outer circle depicts the mitochondrial genome with annotated tRNAs (gray), rRNAs (purple), protein-coding genes, and non-coding regions (white).</p>
 
 ### 5. Conventional and validation techniques for mtDNA diagnosis
