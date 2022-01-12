@@ -82,7 +82,7 @@ Describe using 8 different dimensions:
 
 ## 4.algrithms at a glance
 
-
+it s complex!
 
 ## 5.build a recommender system
 
