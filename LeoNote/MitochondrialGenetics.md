@@ -93,7 +93,7 @@ Skeletal muscle is one of the most metabolically active tissue types with partic
   | Haplogrep2                         | Haplogroup prediction | https://haplogrep.uibk.ac.at/                                | Weissensteiner et al., 2016b |
   
   </center>
-  <!-- Table --> 
+  <!-- Table -->
 
   Few tools are dedicated to mitochondrial tRNAs, which accounting for nearly 50% of the mtDNA alterations identified in patients. There are PON-mt-RNA, MITOTOP.
 

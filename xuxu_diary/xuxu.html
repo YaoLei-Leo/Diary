@@ -3,29 +3,88 @@
     <head>
         <style>
             * {
-                padding:0;
-                margin:0;
-                text-align: center;
+                padding: 0;
+                margin: 0;
+                font-family: Arial, sans-serif;
             }
+
             header {
-                background-color: MediumSeaGreen;
-                color: white;
+                text-align: center;
+                padding: 1%;
+                background-color: #666699;
+                color: White;
             }
-            #mainContent {
-                padding: 20px;
-                line-height: 30px;
+
+            .sideNav {
+                height: 100%; /* Full-height: remove this if you want "auto" height*/
+                width: 13%; /* Set the width of the sidebar */
+                position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+                top: 0;
+                z-index: -1;
+                float: left;
+                background-color: #2b2b2b; /* Black */
+                overflow-x: hidden; /* Disable horizontal scroll */
+                padding-top: 6%;
+            }
+
+            .sideNav h2 {
+                color: white;
+                padding-left: 6%;
+            }
+            .sideNav hr{
+                margin-left: 5%;
+                margin-right: 10%;
+            }
+            .sideNav a {
+                padding: 5% 5% 5% 13%;
+                text-decoration: none;
+                font-size: 15px;
+                color: white;
+                display: block;
+            }
+
+            .sideNav a:hover {
+                background-color: black;
+            }
+
+            .mainContent {
+                width: 87%;
+                float: right;
+                background-color: #f1f1f1;
+            }
+
+            .mainContent .articleList {
+                padding: 10%;
+            }
+            .mainContent .articleList p {
+                padding: 5%;
+                font-size: 20px;
+                text-align: center;
             }
         </style>
     </head>
     <body>
         <header>
-            <h1>This is diary of xuxu</h1>
+            <h1>This is a blog system (v0.0.2)</h1>
         </header>
-
-        <div id="mainContent">
-            <p><a href="format 2.html">20220112 paper notes</a></p>
-            
+        <div class="sideNav">
+            <h1><a href="../Index.html" style="font-size: 30px; padding-left: 6%;">HOME</a></h1>
+            <br>
+            <h2>Diary</h2>
+            <hr>
+            <p><a href="../puppy_diary/puppy.html">Puppy</a></p>
+            <p><a href="../xuxu_diary/xuxu.html">Xuxu</a></p>
+            <h2>workNote</h2>
+            <hr>
+            <p><a href="../LeoNote/IndexWorkNote.html">Leo's Note</a></p>
+            <p><a href="../JanesNote/IndexWorkNote.html">Janes' Note</a></p>
         </div>
-        <button><a href="../index.html">Back</a></button>
+
+        <div class="mainContent">
+            <div class="articleList">
+                <p><a href="format 2.html">20220112 paper notes</a></p>
+            </div>
+        </div>
+
     </body>
 </html>
