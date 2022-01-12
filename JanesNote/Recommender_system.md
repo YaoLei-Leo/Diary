@@ -1,18 +1,22 @@
+20220111
+
 # overview
-## 1.introdction
-## 2.the Netflix recommender system
-## 3.taxonomy
-## 4.algrithms at a glance
-## 5.build a recommender system
+- introdction
+- the Netflix recommender system
+- taxonomy
+- algrithms at a glance
+- build a recommender system
 
 
-### 1.Recommender system intro.
+## 1.Recommender system intro.
+*question based*
 
 **what is recommendation?**
 
 the shop owners make recommendations of something that I may like:based on my profile; based on the availability of similar items; the recommendation can be different fromtime to time.
 
 **what is recommender system?**
+
 Formal definition:
 
 A recommender system calculates and provides relevant content to the user based on knowledge of the user, content, and interactions between the user and the item.
@@ -54,13 +58,14 @@ Why using Recommender system?
 - Conversion perspective 
   - change visitor to customer
 
-### 2.Netflix recommender system
+## 2.Netflix recommender system
 
 **Netflix Top pick pipeline**
+
 ![pipeline](https://freecontent.manning.com/wp-content/uploads/falk_a_01.png)
 
 
-### 3.taxonomy
+## 3.taxonomy
 
 *Which recommender system to use in a new application? How to analyse the needs?*
 
@@ -75,7 +80,9 @@ Describe using 8 different dimensions:
 - Interfaces
 - Algorithms
 
-### 4.algrithms at a glance
+## 4.algrithms at a glance
 
-### 5.build a recommender system
+
+
+## 5.build a recommender system
 
