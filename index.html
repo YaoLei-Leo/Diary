@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            function login(){
-                var password= document.getElementById("password").value;
-                if (password=="test"){
-                    document.getElementById("hint").innerHTML="Password correct";
-                    window.location.href = "/Diary/main.html"
-                    }
 
-                else{
-                    document.getElementById("hint").innerHTML="Wrong password, please input again.";
-                }
-            }
-        </script>
     </head>
     <body>
-        <h1>This is a diary system (v0.0.1)</h1>
+        <h1>This is a blog system (v0.0.1)</h1>
         <hr>
-        <div id="loginForm">
-            <label>Password: </label>
-            <input id="password" type="password" placeholder="Enter Password" required>
-            <button type="submit" onclick="login()">Login</button>
-            <p id="hint">Please input the password to access diary</p>
+        <div id="mainContent">
+            <h2>Diary Part</h2>
+            <p><a href="./puppy_diary/puppy.html">Puppy</a></p>
+            <p><a href="./xuxu_diary/xuxu.html">Xuxu</a></p>
         </div>
-
+        <hr>
+        <div id="workNote">
+            <h2>workNote Part</h2>
+            <p><a href="./LeoNote/IndexWorkNote.html">LeoNote</a></p>
+            <p><a href="./JanesNote/IndexWorkNote.html">JanesNote</a></p>
+        </div>
     </body>
 </html>
