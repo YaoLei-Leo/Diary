@@ -80,6 +80,7 @@ Skeletal muscle is one of the most metabolically active tissue types with partic
 
   Recent tools developed for mtDNA using machine learing based approaches show better performace.
   <!-- Table --> 
+  <center>
 
   | *In Silico* Prediction Tools       |                       |                                                              |                              |
   | ---------------------------------- | --------------------- | ------------------------------------------------------------ | ---------------------------- |
@@ -91,6 +92,7 @@ Skeletal muscle is one of the most metabolically active tissue types with partic
   | PON-mt-tRNA                        | tRNA variants         | http://structure.bmc.lu.se/PON-mt-tRNA/                      | Niroula and Vihinen, 2016    |
   | Haplogrep2                         | Haplogroup prediction | https://haplogrep.uibk.ac.at/                                | Weissensteiner et al., 2016b |
   
+  </center>
   <!-- Table --> 
 
   Few tools are dedicated to mitochondrial tRNAs, which accounting for nearly 50% of the mtDNA alterations identified in patients. There are PON-mt-RNA, MITOTOP.
