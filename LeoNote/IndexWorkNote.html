@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <style>
+            * {
+                padding:0;
+                margin:0;
+                text-align: center;
+            }
+            header {
+                background-color: MediumSeaGreen;
+                color: white;
+            }
+            #mainContent {
+                padding: 20px;
+                line-height: 30px;
+            }
+        </style>
     </head>
     <body>
-        <h1>This is WorkNote of Leo</h1>
-        <hr>
-        <p><a href="./MitochondriaGenetics.html">Mitochondria Genetics</a></p>
-        <p><a href="./CommandSummary.html">CommandSummary</a></p>
-        <hr>
-        <a href="../index.html">Back</a>
+        <header>
+            <h1>This is WorkNote of Leo</h1>
+        </header>
+
+        <div id='mainContent'>
+            <p><a href="./MitochondriaGenetics.html">Mitochondria Genetics</a></p>
+            <p><a href="./CommandSummary.html">Command Summary</a></p>
+        </div>
+        <button><a href="../index.html">Back</a></button>
     </body>
 </html>

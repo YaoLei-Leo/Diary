@@ -7,12 +7,30 @@
         <!-- Load the element definition -->
         <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
 
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                background-color: rgb(177, 179, 182);
+            }
+            #mainContent {
+                margin: 50px;
+                padding: 20px;
+                background-color: white;
+            }
+            
+            button {
+                margin: 50px;
+            }
+        </style>
 
     </head>
     <body>
-        <!-- Simply set the `src` attribute to your MD file and win -->
-        <zero-md src="./MitochondrialGenetics.md"></zero-md>
-        <hr>
-        <a href="./IndexWorkNote.html">Back</a>
+        <div id="mainContent">
+            <!-- Simply set the `src` attribute to your MD file and win -->
+            <zero-md src="./MitochondrialGenetics.md"></zero-md>
+        </div>
+
+        <button><a href="./IndexWorkNote.html">Back</a></button>
     </body>
 </html>

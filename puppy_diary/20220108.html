@@ -7,12 +7,24 @@
         <!-- Load the element definition -->
         <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
 
-
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            #mainContent {
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        </style>
     </head>
     <body>
         <!-- Simply set the `src` attribute to your MD file and win -->
-        <zero-md src="20220108.md"></zero-md>
-        <hr>
-        <a href="./puppy.html">Back</a>
+        <div id='mainContent'>
+            <zero-md src="20220108.md"></zero-md>
+        </div>
+        <button><a href="./puppy.html">Back</a></button>
     </body>
 </html>
