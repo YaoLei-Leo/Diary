@@ -38,3 +38,12 @@ By default, samtools tries to select a format based on the -o filename extension
 ```Bash
 samtools view -b in.bam chr1 > chr1.bam
 ```
+
+## Bcftools
+### 1.merge [bcftools merge link](https://samtools.github.io/bcftools/bcftools.html#merge)
+**bcftools merge [OPTIONS] A.vcf.gz B.vcf.gz […]**
+
+Example:
+```Bash
+bcftools merge A.vcf.gz B.vcf.gz -Oz -o merged.vcf.gz
+```
