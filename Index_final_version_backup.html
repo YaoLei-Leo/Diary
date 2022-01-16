@@ -96,6 +96,33 @@
                 
             }
 
+            .main .rightPanel .markdownContent button {
+                background-color: none;
+                border: none;
+                color: #0099CC;
+                font-size: 2rem;
+                margin: 0;
+                padding: 0;
+            }
+
+            .main .rightPanel .markdownContent button:hover {
+                cursor: pointer;
+            }
+
+            .main .rightPanel .card {
+                float: left;
+                background-color: white;
+                border-radius: 4px;
+                margin: 0rem 1rem 1rem 0rem;
+                width: 25rem;
+                height: 33rem;
+            }
+
+            .main .rightPanel .markdownContent zero-md {
+                background-color: white;
+                padding: 1rem;
+            }
+
             .main .rightPanel .card {
                 float: left;
                 background-color: white;
@@ -124,12 +151,13 @@
 
             .main .rightPanel .card .abstract h3{
                 margin: 0rem 0rem 0rem 0rem;
-            }
-
-            .main .rightPanel .card .abstract h3 a{
-                margin: 0rem 0rem 0rem 0rem;
                 text-decoration: none;
                 color: #0099CC;
+            }
+
+            .main .rightPanel .card .abstract h3:hover{
+                color: #ff6666;
+                cursor: pointer;
             }
 
 
@@ -151,6 +179,8 @@
    
             
         </style>
+        <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
     <body>
         <header>
@@ -164,107 +194,104 @@
                         <li><h1>Navigation Bar</h1></li>
                         <li><h2><a href="./Index.html">1.Recent Posts</a></h2></li>
                         <li><h2>2.The Diary</h2></li>
-                        <li><h3><a href="./puppy_diary/puppy.html">Puppy</a></h3></li>
-                        <li><h3><a href="./xuxu_diary/xuxu.html">Xuxu</a></h3></li>
+                        <li><h3><a href="./PuppyDiary/Puppy.html">Puppy</a></h3></li>
+                        <li><h3><a href="./XuxuDiary/Xuxu.html">Xuxu</a></h3></li>
                         <li><h2>3.Work Note<h2></li>
-                        <li><h3><a href="./LeoNote/IndexWorkNote.html">Leo's Note</a><h3></li>
-                        <li><h3><a href="./JanesNote/IndexWorkNote.html">Janes' Note</a></h3></li>
+                        <li><h3><a href="./LeoNote/LeoNote.html">Leo's Note</a><h3></li>
+                        <li><h3><a href="./JaneNote/JaneNote.html">Janes' Note</a></h3></li>
                     </ul>
                 </div>
 
             </div>
             <div class="rightPanel">
-                <!-- Insert position -->
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/3738673/pexels-photo-3738673.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
-                    <div class="abstract">
-                        <h3><a href="./JanesNote/Recommender_system.html">Recommender System</a></h3>
-                        <p class="author">Jane</p>
-                        <p class="hashTag">#consectetuer #ligula #Aenean</p>
-                        <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-                    </div>
+                <div class="markdownContent" style="display: none;">
+                    <button>Back</button>
+                    <hr>
+                    <!-- Markdown insert position -->
+                    <zero-md src="./JaneNote/Recommender_system.md" id="5" style="display: none;"></zero-md>
+                    <zero-md src="./LeoNote/CommandSummary.md" id="4" style="display: none;"></zero-md>
+                    <zero-md src="./LeoNote/MitochondrialGenetics.md" id="3" style="display: none;"></zero-md>
+                    <zero-md src="./PuppyDiary/20220116.md" id="2" style="display: none;"></zero-md>
+                    <zero-md src="./PuppyDiary/20220108.md" id="1" style="display: none;"></zero-md>
                 </div>
+                <div class="cardIndex">
+                    <!-- Insert position -->
 
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/6446676/pexels-photo-6446676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-                    <div class="abstract">
-                        <h3><a href="./JanesNote/Recommender_system.html">Recommender System</a></h3>
-                        <p class="author">Jane</p>
-                        <p class="hashTag">#consectetuer #ligula #Aenean</p>
-                        <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/2726370/pexels-photo-2726370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        <div class="abstract">
+                            <h3 id="@5">Recommender System</h3>
+                            <p class="author">Jane</p>
+                            <p class="hashTag">#</p>
+                            <p class="abstractContent">The Netflix recommender system, taxonomy, algrithms at a glance, build a recommender system.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-                    <div class="abstract">
-                        <h3><a href="./JanesNote/Recommender_system.html">Recommender System</a></h3>
-                        <p class="author">Jane</p>
-                        <p class="hashTag">#consectetuer #ligula #Aenean</p>
-                        <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.</p>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/207580/pexels-photo-207580.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        <div class="abstract">
+                            <h3 id="@4">Command Summary</h3>
+                            <p class="author">Leo</p>
+                            <p class="hashTag">#</p>
+                            <p class="abstractContent">Bash command daily usage.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-                    <div class="abstract">
-                        <h3><a href="./JanesNote/Recommender_system.html">Recommender System</a></h3>
-                        <p class="author">Jane</p>
-                        <p class="hashTag">#consectetuer #ligula #Aenean</p>
-                        <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.</p>
+                    <div class="card">
+                        <img src="https://media.istockphoto.com/photos/mitochondria-microbiology-picture-id521497656?k=20&m=521497656&s=612x612&w=0&h=TmPZ6vXhFdFSoM1FlCqKVPIUhNnUz3QQ2br6sdaLjL8=">
+                        <div class="abstract">
+                            <h3 id="@3">Mitochondria Genetics</h3>
+                            <p class="author">Leo</p>
+                            <p class="hashTag">#</p>
+                            <p class="abstractContent">In MDA, mitochondrial correlated Neuromuscular diseases have following type.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/1702624/pexels-photo-1702624.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-                    <div class="abstract">
-                        <h3><a href="./JanesNote/Recommender_system.html">Recommender System</a></h3>
-                        <p class="author">Jane</p>
-                        <p class="hashTag">#consectetuer #ligula #Aenean</p>
-                        <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.</p>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/1089440/pexels-photo-1089440.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                        <div class="abstract">
+                            <h3 id="@2">2022Jan16 Diary</h3>
+                            <p class="author">Puppy</p>
+                            <p class="hashTag">#HTML #CSS #Javascript</p>
+                            <p class="abstractContent">At this weekend, I finished most works of my diary website development, including the structure, color theme, and javascript development.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/3805983/pexels-photo-3805983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-                    <div class="abstract">
-                        <h3><a href="./JanesNote/Recommender_system.html">Recommender System</a></h3>
-                        <p class="author">Jane</p>
-                        <p class="hashTag">#consectetuer #ligula #Aenean</p>
-                        <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.</p>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        <div class="abstract">
+                            <h3 id="@1">2022Jan8 Diary</h3>
+                            <p class="author">Puppy</p>
+                            <p class="hashTag">#HTML</p>
+                            <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/2443590/pexels-photo-2443590.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-                    <div class="abstract">
-                        <h3><a href="./JanesNote/Recommender_system.html">Recommender System</a></h3>
-                        <p class="author">Jane</p>
-                        <p class="hashTag">#consectetuer #ligula #Aenean</p>
-                        <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/373883/pexels-photo-373883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-                    <div class="abstract">
-                        <h3><a href="./JanesNote/Recommender_system.html">Recommender System</a></h3>
-                        <p class="author">Jane</p>
-                        <p class="hashTag">#consectetuer #ligula #Aenean</p>
-                        <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-                    <div class="abstract">
-                        <h3><a href="./JanesNote/Recommender_system.html">Recommender System</a></h3>
-                        <p class="author">Jane</p>
-                        <p class="hashTag">#consectetuer #ligula #Aenean</p>
-                        <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.</p>
-                    </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            $(function(){
+                $(".abstract h3").click(function(){
+                    /*alert($(this).attr("id"));*/
+                    /*alert($(this).parent().parent().attr("class"));*/
+                    /*var idNum = $(this).attr("id").replace("$","@");
+                    alert(idNum);*/
+                    var mdID = $(this).attr("id").replace("@","");
+                    $(".cardIndex").hide();
+                    $(".markdownContent").show();
+                    $("#".concat(mdID)).show();
+                });
+            });
+    
+            $(function(){
+                $(".markdownContent button").click(function(){
+                    $(".markdownContent").children("zero-md").hide();
+                    $(".markdownContent").hide();
+                    $(".cardIndex").show();
+                });
+            });
+        </script>
     </body>
 </html>
