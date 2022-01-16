@@ -30,7 +30,9 @@
             .sideNav h2 {
                 color: white;
                 padding-left: 6%;
+                padding-right: 6%;
             }
+
             .sideNav hr{
                 margin-left: 5%;
                 margin-right: 10%;
@@ -53,14 +55,23 @@
                 background-color: #f1f1f1;
             }
 
-            .mainContent .articleList {
-                padding: 10%;
-            }
-            .mainContent .articleList p {
-                padding: 5%;
-                font-size: 20px;
+            .card {
+                border-radius: 25px;
+                background-color: white;
+                padding: 4%;
+                margin: 6%;
                 text-align: center;
+                line-height: 35px;
             }
+
+            .card img {
+                width: 70%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                border: 5px solid #555
+            }
+
         </style>
     </head>
     <body>
@@ -68,23 +79,34 @@
             <h1>This is a blog system (v0.0.2)</h1>
         </header>
         <div class="sideNav">
-            <h1><a href="../Index.html" style="font-size: 30px; padding-left: 6%;">HOME</a></h1>
+            <h1><a href="./Index.html" style="font-size: 30px; padding-left: 6%;">HOME</a></h1>
             <br>
             <h2>Diary</h2>
             <hr>
-            <p><a href="../puppy_diary/puppy.html">Puppy</a></p>
-            <p><a href="../xuxu_diary/xuxu.html">Xuxu</a></p>
+            <p><a href="./puppy_diary/puppy.html">Puppy</a></p>
+            <p><a href="./xuxu_diary/xuxu.html">Xuxu</a></p>
             <h2>workNote</h2>
             <hr>
-            <p><a href="../LeoNote/IndexWorkNote.html">Leo's Note</a></p>
-            <p><a href="../JanesNote/IndexWorkNote.html">Janes' Note</a></p>
+            <p><a href="./LeoNote/IndexWorkNote.html">Leo's Note</a></p>
+            <p><a href="./JanesNote/IndexWorkNote.html">Janes' Note</a></p>
         </div>
-
         <div class="mainContent">
-            <div class="articleList">
-                <p><a href="./20220108.html">20220108</a></p>
-            </div>
+                <div class="card">
+                    <h3><a href="./JanesNote/Recommender_system.html">Recommender System</a></h3>
+                    <p>by Janes</p>
+                    <img src="https://freecontent.manning.com/wp-content/uploads/falk_a_01.png">
+                </div>
+
+                <div class="card">
+                    <h3><a href="./LeoNote/CommandSummary.html">Command Summary</a></h3>
+                    <p>By Leo</p>
+                </div>
+
+                <div class="card">
+                    <h3><a href="./LeoNote/MitochondriaGenetics.html">Mitochondria Genetics</a></h3>
+                    <p>By Leo</p>
+                    <img src="https://raw.githubusercontent.com/YaoLei-Leo/Diary/main/puppy_diary/MitochondrialGenetics/Mitochondrial%20DNA.jpg">
+                </div>
         </div>
-        
     </body>
 </html>

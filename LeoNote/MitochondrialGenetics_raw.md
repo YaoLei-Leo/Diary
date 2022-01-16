@@ -55,6 +55,9 @@ Skeletal muscle is one of the most metabolically active tissue types with partic
   <p style="text-align:center"><img src="https://raw.githubusercontent.com/YaoLei-Leo/Diary/main/puppy_diary/MitochondrialGenetics/Graphical%20representation%20of%20human%20mitochondrial%20DNA%20variations.png"></p>
   <p style="text-align:center">Graphical representation of human mitochondrial DNA variations. The outer circle depicts the mitochondrial genome with annotated tRNAs (gray), rRNAs (purple), protein-coding genes, and non-coding regions (white).</p>
 
+### 5. Mitochondria Genetics
+  In human mitochondia, most information is encoded on the heavy (H) strand, with genes for two rRNAs, 14 tRNAs, and 12 polypeptides. The light (L) strand encodes for eight tRNAs and a single polypeptide. Almost all the mtDNA is coding except for one regulartroy region (D-loop: the displacement loop) and few non coding sequences (NC) limited to a few bases. [@mkaouar-rebai_mitochondrial_2016]
+
 ### 5. Conventional and validation techniques for mtDNA diagnosis
   Targeted Sanger sequencing for the detection of mutations, long-range PCR and Southern blotting for the detection of mtDNA rearrangements and depletions. fluorescent PCR restriction frament length polymorphism (RFLP) and pyrosequencing were used for the quantification of mtDNA variatns and rearrangements. These techniques are still useful as confirmatory and independent tools to ascertain the presence of a given mtDNA variant identified by NGS [^bris_bioinformatics_2018].
 
