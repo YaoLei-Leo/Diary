@@ -143,12 +143,12 @@ def main(md, img, articleName, user, hashTag, abstract):
     ConductSubstitution(html, "{}/New.html".format(os.path.dirname(html)))
 
 if __name__ == "__main__":
-    md = "VennPlot.md"
-    img = "TripleVennPlot.png"
-    articleName = "Venn Plot using R"
-    user = "LeoNote"
-    hashTag = "#"
-    abstract = "Powerpoint default venn plot method does not offer proportional venn circles. Therefore, I use R package eulerr to acheive this aim."
+    md = "AiDigitalMedia.md"
+    img = "https://righttoinformation.wiki/_media/explanations/rti-information.jpg"
+    articleName = "Computational Communication Science"
+    user = "JaneNote"
+    hashTag = "#Method #Communication"
+    abstract = ""
     
     img = md.replace(".md","_src/") + img
     
