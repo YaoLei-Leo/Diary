@@ -98,17 +98,8 @@ def ConductSubstitution(html, newhtml):
         os.rename(newhtml, html)
     else:
         print("The {} file does not exist".format(html))
-
-if __name__ == "__main__":
-    md = "VennPlot.md"
-    img = "TripleVennPlot.png"
-    articleName = "Venn Plot using R"
-    user = "LeoNote"
-    hashTag = "#"
-    abstract = "Powerpoint default venn plot method does not offer proportional venn circles. Therefore, I use R package eulerr to acheive this aim."
-    
-    img = md.replace(".md","_src/") + img
-    
+        
+def main(md, img, articleName, user, hashTag, abstract):
     # 1. Test file integrity
     ## 1.1 Recent Posts
     html = "../index.html"
@@ -120,7 +111,7 @@ if __name__ == "__main__":
 
     ## 1.2 User folder.
     if user == "PuppyDiary" or user == "XuxuDiary" or user == "LeoNote" or  user == "JaneNote":
-        html = "../{}/{}.html".format(user,user)
+        html = "../{}/{}.html".format(user, user)
         if DetectInsertionPos(html) == DetectIDIntegrity(html,"$") == 0:
             logging.info("Main: {} Document are correct".format(html))
         else:
@@ -141,3 +132,24 @@ if __name__ == "__main__":
         html = "../{}/{}.html".format(user,user)
     # InsertToUserFolder(html, md, img, articleName, user, hashTag, abstract)
     InsertToHtml("$", html, md, img, articleName, user, hashTag, abstract)
+    
+    # 3. Conduct substitution
+    ## 3.1 Recent Posts
+    html = "../index.html"
+    ConductSubstitution(html, "{}/New.html".format(os.path.dirname(html)))
+    ## 3.2 User folder.
+    if user == "PuppyDiary" or user == "XuxuDiary" or user == "LeoNote" or  user == "JaneNote":
+        html = "../{}/{}.html".format(user,user)
+    ConductSubstitution(html, "{}/New.html".format(os.path.dirname(html)))
+
+if __name__ == "__main__":
+    md = "VennPlot.md"
+    img = "TripleVennPlot.png"
+    articleName = "Venn Plot using R"
+    user = "LeoNote"
+    hashTag = "#"
+    abstract = "Powerpoint default venn plot method does not offer proportional venn circles. Therefore, I use R package eulerr to acheive this aim."
+    
+    img = md.replace(".md","_src/") + img
+    
+    main(md, img, articleName, user, hashTag, abstract)
