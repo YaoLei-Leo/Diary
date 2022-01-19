@@ -12,26 +12,37 @@ def ExtractMarkdownAndCardSyntaxToList(html):
     otherSyntax = ''
     with open(html) as f:
         for line1 in f:
-            if re.search(r'<zero-md src="(.*)" id="(\d*)" style="display: none;"></zero-md>', line1):
-                if otherSyntax != '':
-                    otherSyntaxList.append(otherSyntax)
-                    otherSyntax = ''
-                markdownSyntaxList.append(line1)
-                
-            elif re.search(r'<div class="card">', line1):
-                if otherSyntax != '':
-                    otherSyntaxList.append(otherSyntax)
-                    otherSyntax = ''
-                cardSyntax = line1
-                for i in range(1, 10):
-                    line2 = f.readline()
-                    cardSyntax = cardSyntax + line2
-                cardSyntaxList.append(cardSyntax)
+            if re.search(r'<!-- Markdown insert position -->', line1):
+                otherSyntax = otherSyntax + line1
+                otherSyntaxList.append(otherSyntax)
+                otherSyntax = ''
+                    
+                for line2 in f:
+                    if re.search(r'<zero-md src="(.*)" id="(\d*)" style="display: none;"></zero-md>', line2):
+                        markdownSyntaxList.append(line2)
+                    else:
+                        otherSyntax = otherSyntax + line2
+                        break
+    
+            elif re.search(r'<!-- Card insert position -->', line1):
+                otherSyntax = otherSyntax + line1
+                otherSyntaxList.append(otherSyntax)
+                otherSyntax = ''
+
+                for line2 in f:
+                    if re.search(r'<!-- Card insert end position -->', line2):
+                        otherSyntax = otherSyntax + line2
+                        break
+                    cardSyntax = line2
+                    for i in range(1, 10):
+                        line2 = f.readline()
+                        cardSyntax = cardSyntax + line2
+                    cardSyntaxList.append(cardSyntax)
             else:
                 otherSyntax = otherSyntax + line1
         otherSyntaxList.append(otherSyntax)
     # print(markdownSyntaxList)
-    # print(cardSyntaxList[0])
+    # print(cardSyntaxList)
     # print(otherSyntaxList[2])
     return [markdownSyntaxList, cardSyntaxList, otherSyntaxList]
 
@@ -47,10 +58,10 @@ def InsertNewPost(syntaxList, md, img, articleName, user, hashTag, abstract):
     
     markdownSyntax = 5*'\t' + '<zero-md src="{}" id="{}" style="display: none;"></zero-md>'.format(md, len(markdownSyntaxList)+1) + "\n"
     
-    if re.match(r'../', md):
-        cardSyntax = 5*"\t" + "<div class=\"card\">" + "\n" + 6*"\t" + "<img src={}/{}>".format(user,img) + "\n" + 6*"\t" + "<div class=\"abstract\">" + "\n" + 7*"\t" + "<h3 id=\"@{}\">{}</h3>".format(len(cardSyntaxList)+1, articleName) + "\n" + 7*"\t" + "<p class=\"author\">{}</p>".format(user) + "\n" + 7*"\t" + "<p class=\"hashTag\">{}</p>".format(hashTag) + "\n" + 7*"\t" + "<p class=\"abstractContent\">{}</p>".format(abstract) + "\n" + 6*"\t" + "</div>" + "\n" + 5*"\t" + "</div>" + "\n" + "\n"
+    if re.match(r'./', md):
+        cardSyntax = 5*"\t" + "<div class=\"card\">" + "\n" + 6*"\t" + "<img src=\"{}/{}\">".format(user,img) + "\n" + 6*"\t" + "<div class=\"abstract\">" + "\n" + 7*"\t" + "<h3 id=\"@{}\">{}</h3>".format(len(cardSyntaxList)+1, articleName) + "\n" + 7*"\t" + "<p class=\"author\">{}</p>".format(user) + "\n" + 7*"\t" + "<p class=\"hashTag\">{}</p>".format(hashTag) + "\n" + 7*"\t" + "<p class=\"abstractContent\">{}</p>".format(abstract) + "\n" + 6*"\t" + "</div>" + "\n" + 5*"\t" + "</div>" + "\n" + "\n"
     else:
-        cardSyntax = 5*"\t" + "<div class=\"card\">" + "\n" + 6*"\t" + "<img src={}/{}>".format(user,img) + "\n" + 6*"\t" + "<div class=\"abstract\">" + "\n" + 7*"\t" + "<h3 id=\"${}\">{}</h3>".format(len(cardSyntaxList)+1, articleName) + "\n" + 7*"\t" + "<p class=\"author\">{}</p>".format(user) + "\n" + 7*"\t" + "<p class=\"hashTag\">{}</p>".format(hashTag) + "\n" + 7*"\t" + "<p class=\"abstractContent\">{}</p>".format(abstract) + "\n" + 6*"\t" + "</div>" + "\n" + 5*"\t" + "</div>" + "\n" + "\n"
+        cardSyntax = 5*"\t" + "<div class=\"card\">" + "\n" + 6*"\t" + "<img src=\"{}/{}\">".format(user,img) + "\n" + 6*"\t" + "<div class=\"abstract\">" + "\n" + 7*"\t" + "<h3 id=\"${}\">{}</h3>".format(len(cardSyntaxList)+1, articleName) + "\n" + 7*"\t" + "<p class=\"author\">{}</p>".format(user) + "\n" + 7*"\t" + "<p class=\"hashTag\">{}</p>".format(hashTag) + "\n" + 7*"\t" + "<p class=\"abstractContent\">{}</p>".format(abstract) + "\n" + 6*"\t" + "</div>" + "\n" + 5*"\t" + "</div>" + "\n" + "\n"
     
     markdownSyntaxList.insert(0, markdownSyntax)
     cardSyntaxList.insert(0, cardSyntax)
@@ -61,9 +72,8 @@ def WriteSyntaxToHtml(syntaxList, htmlPath):
     markdownSyntaxList = syntaxList[0]
     cardSyntaxList = syntaxList[1]
     otherSyntaxList = syntaxList[2]
-    
     output = open(htmlPath, 'w')
-    
+
     output.write(otherSyntaxList[0])
     for i in markdownSyntaxList:
         output.write(i)
@@ -78,7 +88,7 @@ def main(md, img, articleName, user, hashTag, abstract):
     ## 1. User folder
     html = "../{}/{}".format(user, user) + '.html'
     output = '{}/New.html'.format(os.path.dirname(html))
-    syntaxList = ExtractMarkdownAndCardSyntaxToList(html) 
+    syntaxList = ExtractMarkdownAndCardSyntaxToList(html)
     syntaxList = InsertNewPost(syntaxList, md, img, articleName, user, hashTag, abstract)
     WriteSyntaxToHtml(syntaxList, output)
 
@@ -91,11 +101,11 @@ def main(md, img, articleName, user, hashTag, abstract):
     WriteSyntaxToHtml(syntaxList, output)
     
 if __name__ == "__main__":
-    md = "AiDigitalMedia.md"
-    img = "https://righttoinformation.wiki/_media/explanations/rti-information.jpg"
-    articleName = "Computational Communication Science"
-    user = "LeoNote"
-    hashTag = "#Method #Communication"
-    abstract = ""
+    md = "TestInsertion.md"
+    img = ""
+    articleName = "Test Insertion"
+    user = "JaneNote"
+    hashTag = "#test"
+    abstract = "Test insertion"
     
     main(md, img, articleName, user, hashTag, abstract)
