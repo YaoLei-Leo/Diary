@@ -13,9 +13,10 @@ def ConductSubstitution(html, newHtml):
         sys.exit()
         
 if __name__ == "__main__":
+    user = "PuppyDiary"
+    
     recentPost = "../index.html"
     newRecentPost = "../New.html"
-    user = "JaneNote"
     userFolder = "../{}/{}.html".format(user, user)
     newUserFolder = "../{}/New.html".format(user)
     

@@ -59,9 +59,9 @@ def InsertNewPost(syntaxList, md, img, articleName, user, hashTag, abstract):
     markdownSyntax = 5*'\t' + '<zero-md src="{}" id="{}" style="display: none;"></zero-md>'.format(md, len(markdownSyntaxList)+1) + "\n"
     
     if re.match(r'./', md):
-        cardSyntax = 5*"\t" + "<div class=\"card\">" + "\n" + 6*"\t" + "<img src=\"{}/{}\">".format(user,img) + "\n" + 6*"\t" + "<div class=\"abstract\">" + "\n" + 7*"\t" + "<h3 id=\"@{}\">{}</h3>".format(len(cardSyntaxList)+1, articleName) + "\n" + 7*"\t" + "<p class=\"author\">{}</p>".format(user) + "\n" + 7*"\t" + "<p class=\"hashTag\">{}</p>".format(hashTag) + "\n" + 7*"\t" + "<p class=\"abstractContent\">{}</p>".format(abstract) + "\n" + 6*"\t" + "</div>" + "\n" + 5*"\t" + "</div>" + "\n" + "\n"
+        cardSyntax = 5*"\t" + "<div class=\"card\">" + "\n" + 6*"\t" + "<img src=\"{}\">".format(img) + "\n" + 6*"\t" + "<div class=\"abstract\">" + "\n" + 7*"\t" + "<h3 id=\"@{}\">{}</h3>".format(len(cardSyntaxList)+1, articleName) + "\n" + 7*"\t" + "<p class=\"author\">{}</p>".format(user) + "\n" + 7*"\t" + "<p class=\"hashTag\">{}</p>".format(hashTag) + "\n" + 7*"\t" + "<p class=\"abstractContent\">{}</p>".format(abstract) + "\n" + 6*"\t" + "</div>" + "\n" + 5*"\t" + "</div>" + "\n" + "\n"
     else:
-        cardSyntax = 5*"\t" + "<div class=\"card\">" + "\n" + 6*"\t" + "<img src=\"{}/{}\">".format(user,img) + "\n" + 6*"\t" + "<div class=\"abstract\">" + "\n" + 7*"\t" + "<h3 id=\"${}\">{}</h3>".format(len(cardSyntaxList)+1, articleName) + "\n" + 7*"\t" + "<p class=\"author\">{}</p>".format(user) + "\n" + 7*"\t" + "<p class=\"hashTag\">{}</p>".format(hashTag) + "\n" + 7*"\t" + "<p class=\"abstractContent\">{}</p>".format(abstract) + "\n" + 6*"\t" + "</div>" + "\n" + 5*"\t" + "</div>" + "\n" + "\n"
+        cardSyntax = 5*"\t" + "<div class=\"card\">" + "\n" + 6*"\t" + "<img src=\"{}\">".format(img) + "\n" + 6*"\t" + "<div class=\"abstract\">" + "\n" + 7*"\t" + "<h3 id=\"${}\">{}</h3>".format(len(cardSyntaxList)+1, articleName) + "\n" + 7*"\t" + "<p class=\"author\">{}</p>".format(user) + "\n" + 7*"\t" + "<p class=\"hashTag\">{}</p>".format(hashTag) + "\n" + 7*"\t" + "<p class=\"abstractContent\">{}</p>".format(abstract) + "\n" + 6*"\t" + "</div>" + "\n" + 5*"\t" + "</div>" + "\n" + "\n"
     
     markdownSyntaxList.insert(0, markdownSyntax)
     cardSyntaxList.insert(0, cardSyntax)
@@ -83,8 +83,6 @@ def WriteSyntaxToHtml(syntaxList, htmlPath):
     output.write(otherSyntaxList[2])
 
 def main(md, img, articleName, user, hashTag, abstract):
-    img = md.replace(".md","_src/") + img
-    
     ## 1. User folder
     html = "../{}/{}".format(user, user) + '.html'
     output = '{}/New.html'.format(os.path.dirname(html))
@@ -101,11 +99,11 @@ def main(md, img, articleName, user, hashTag, abstract):
     WriteSyntaxToHtml(syntaxList, output)
     
 if __name__ == "__main__":
-    md = "TestInsertion.md"
-    img = ""
-    articleName = "Test Insertion"
-    user = "JaneNote"
-    hashTag = "#test"
-    abstract = "Test insertion"
+    md = "20220119.md"
+    img = "https://images.pexels.com/photos/5985670/pexels-photo-5985670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    articleName = "2022 Jan 19 Diary"
+    user = "PuppyDiary"
+    hashTag = "#Diary"
+    abstract = "Today I got up around 11 am， and again arrive at office around 12. I always want to get up earlier. I begin my Short Tandem Repeats pipieline today. It seems I need read a lot of paper to choose 3 good tools."
     
     main(md, img, articleName, user, hashTag, abstract)
