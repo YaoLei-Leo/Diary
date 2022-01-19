@@ -99,11 +99,11 @@ def main(md, img, articleName, user, hashTag, abstract):
     WriteSyntaxToHtml(syntaxList, output)
     
 if __name__ == "__main__":
-    md = "20220119.md"
-    img = "https://images.pexels.com/photos/5985670/pexels-photo-5985670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-    articleName = "2022 Jan 19 Diary"
-    user = "PuppyDiary"
-    hashTag = "#Diary"
-    abstract = "Today I got up around 11 am， and again arrive at office around 12. I always want to get up earlier. I begin my Short Tandem Repeats pipieline today. It seems I need read a lot of paper to choose 3 good tools."
+    md = "ShortTandemRepeat.md"
+    img = "https://ib.bioninja.com.au/_Media/str_med.jpeg"
+    articleName = "Short Tandem Repeat"
+    user = "LeoNote"
+    hashTag = "#STR #Summary"
+    abstract = "What is short tandem repeat ? What STR will cause ? My summary about short tandem repeats in Neuromuscular diseases."
     
     main(md, img, articleName, user, hashTag, abstract)

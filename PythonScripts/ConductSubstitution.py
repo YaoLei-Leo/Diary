@@ -6,14 +6,14 @@ logging.basicConfig(level=logging.NOTSET)
 
 def ConductSubstitution(html, newHtml):
     if os.path.exists(html) and os.path.exists(newHtml):
-        os.remove(html)
+        os.rename(html, html.replace(".html","_backup.html"))
         os.rename(newHtml, html)
     else:
         logging.error("The html file {} or {} does not exist".format(html, newHtml))
         sys.exit()
         
 if __name__ == "__main__":
-    user = "PuppyDiary"
+    user = "LeoNote"
     
     recentPost = "../index.html"
     newRecentPost = "../New.html"
