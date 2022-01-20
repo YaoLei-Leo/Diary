@@ -99,11 +99,11 @@ def main(md, img, articleName, user, hashTag, abstract):
     WriteSyntaxToHtml(syntaxList, output)
     
 if __name__ == "__main__":
-    md = "ShortTandemRepeat.md"
-    img = "https://ib.bioninja.com.au/_Media/str_med.jpeg"
-    articleName = "Short Tandem Repeat"
-    user = "LeoNote"
-    hashTag = "#STR #Summary"
-    abstract = "What is short tandem repeat ? What STR will cause ? My summary about short tandem repeats in Neuromuscular diseases."
+    md = "20220120.md"
+    img = "https://cdn.images.express.co.uk/img/dynamic/59/590x/Windows-10-Blue-Screen-of-Death-1375284.jpg?r=1608706281236"
+    articleName = "2022 Jan 20 computer emergency!"
+    user = "PuppyDiary"
+    hashTag = "#Computer #Error #Slovment"
+    abstract = "前天windows更新突然停止，導致電腦無法啓動。今天用了九牛二虎之力終於完全解決了這個問題。"
     
     main(md, img, articleName, user, hashTag, abstract)
