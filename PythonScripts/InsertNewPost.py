@@ -99,11 +99,11 @@ def main(md, img, articleName, user, hashTag, abstract):
     WriteSyntaxToHtml(syntaxList, output)
     
 if __name__ == "__main__":
-    md = "20220120.md"
-    img = "https://cdn.images.express.co.uk/img/dynamic/59/590x/Windows-10-Blue-Screen-of-Death-1375284.jpg?r=1608706281236"
-    articleName = "2022 Jan 20 computer emergency!"
-    user = "PuppyDiary"
-    hashTag = "#Computer #Error #Slovment"
-    abstract = "前天windows更新突然停止，導致電腦無法啓動。今天用了九牛二虎之力終於完全解決了這個問題。"
+    md = "Handbook_css.md"
+    img = "./shortCut/rs6250_thinkstockphotos-495070930-low.jpeg"
+    articleName = "Handbook of computational social science"
+    user = "JaneNote"
+    hashTag = "#Computational social science #Digital trace"
+    abstract = "DIGITAL TRACE DATA: Modes of data collection, applications, and errors at a glance"
     
     main(md, img, articleName, user, hashTag, abstract)
