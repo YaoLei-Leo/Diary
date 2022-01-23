@@ -55,38 +55,32 @@
 
             .main .leftPanel .navList ul {
                 border-radius: 4px;
-                list-style-type: none;
                 background-color: white;
-                color: #336699;
                 padding: 1rem;
                 margin: 0;
             }
             
             .main .leftPanel .navList ul li {
-                font-size: 0.9rem;
+                list-style-type: square;
+                font-size: 1.5rem;
                 margin: 1rem 0.5rem 1rem 1.5rem;
             }
 
-            .main .leftPanel .navList ul li h2 a {
+            .main .leftPanel .navList ul li a {
                 text-decoration: none;
-                color:#0099CC;
+                color: #336699;
+                font-weight: bold;
             }
 
-            .main .leftPanel .navList ul li h2 a:hover {
+            .main .leftPanel .navList ul #selected {
                 color: #ff6666;
             }
-            
-            .main .leftPanel .navList ul li h3 {
-                font-size: 1rem;
-                margin: 1rem 0.5rem 1rem 1rem;
-            }
-            
-            .main .leftPanel .navList ul li h3 a {
-                text-decoration: none;
-                color:#0099CC
+
+            .main .leftPanel .navList ul #selected a {
+                color: #ff6666;
             }
 
-            .main .leftPanel .navList ul li h3 a:hover {
+            .main .leftPanel .navList ul li a:hover {
                 color: #ff6666;
             }
 
@@ -176,14 +170,17 @@
     <body>
         <header>
             <p id="logo">Leo-Jane</p>
-            <p id="head">Diary - Xuxu</p>
+            <p id="head">Diary - Jane</p>
         </header>
         <div class="main">
             <div class="leftPanel">
                 <div class="navList">
                     <ul>
-                        <li><h1>Navigation Bar</h1></li>
-                        <li><h2><a href="../">1.Recent Posts</a></h2></li>
+                        <li><a href="../">Recent Posts</a></li>
+                        <li><a href="../LeoDiary/LeoDiary.html">Leo's Diary</a></li>
+                        <li id="selected"><a href="./JaneDiary.html">Jane's Diary</a></li>
+                        <li><a href="../LeoNote/LeoNote.html">Leo's Note</a></li>
+                        <li><a href="../JaneNote/JaneNote.html">Janes' Note</a></li>
                     </ul>
                 </div>
 
