@@ -55,38 +55,32 @@
 
             .main .leftPanel .navList ul {
                 border-radius: 4px;
-                list-style-type: none;
                 background-color: white;
-                color: #336699;
                 padding: 1rem;
                 margin: 0;
             }
             
             .main .leftPanel .navList ul li {
-                font-size: 0.9rem;
+                list-style-type: square;
+                font-size: 1.5rem;
                 margin: 1rem 0.5rem 1rem 1.5rem;
             }
 
-            .main .leftPanel .navList ul li h2 a {
+            .main .leftPanel .navList ul li a {
                 text-decoration: none;
-                color:#0099CC;
+                color: #336699;
+                font-weight: bold;
             }
 
-            .main .leftPanel .navList ul li h2 a:hover {
+            .main .leftPanel .navList ul #selected {
                 color: #ff6666;
             }
-            
-            .main .leftPanel .navList ul li h3 {
-                font-size: 1rem;
-                margin: 1rem 0.5rem 1rem 1rem;
-            }
-            
-            .main .leftPanel .navList ul li h3 a {
-                text-decoration: none;
-                color:#0099CC
+
+            .main .leftPanel .navList ul #selected a {
+                color: #ff6666;
             }
 
-            .main .leftPanel .navList ul li h3 a:hover {
+            .main .leftPanel .navList ul li a:hover {
                 color: #ff6666;
             }
 
@@ -182,8 +176,11 @@
             <div class="leftPanel">
                 <div class="navList">
                     <ul>
-                        <li><h1>Navigation Bar</h1></li>
-                        <li><h2><a href="../">1.Recent Posts</a></h2></li>
+                        <li><a href="../">Recent Posts</a></li>
+                        <li><a href="../LeoDiary/LeoDiary.html">Leo's Diary</a></li>
+                        <li><a href="../JaneDiary/JaneDiary.html">Jane's Diary</a></li>
+                        <li><a href="../LeoNote/LeoNote.html">Leo's Note</a></li>
+                        <li id="selected"><a href="./JaneNote.html">Janes' Note</a></li>
                     </ul>
                 </div>
 
@@ -193,19 +190,19 @@
                     <button>Back</button>
                     <hr>
                     <!-- Markdown insert position -->
-					<zero-md src="TestInsertion.md" id="3" style="display: none;"></zero-md>
+					<zero-md src="Handbook_css.md" id="3" style="display: none;"></zero-md>
 					<zero-md src="AiDigitalMedia.md" id="2" style="display: none;"></zero-md>
                     <zero-md src="Recommender_system.md" id="1" style="display: none;"></zero-md>
                 </div>
                 <div class="cardIndex">
                     <!-- Card insert position -->
 					<div class="card">
-						<img src="JaneNote/TestInsertion_src/">
+						<img src="./Handbook_css_src/rs6250_thinkstockphotos-495070930-low.jpeg">
 						<div class="abstract">
-							<h3 id="$3">Test Insertion</h3>
+							<h3 id="$3">Handbook of computational social science</h3>
 							<p class="author">JaneNote</p>
-							<p class="hashTag">#test</p>
-							<p class="abstractContent">Test insertion</p>
+							<p class="hashTag">#Computational social science #Digital trace</p>
+							<p class="abstractContent">DIGITAL TRACE DATA: Modes of data collection, applications, and errors at a glance</p>
 						</div>
 					</div>
 
@@ -215,7 +212,7 @@
 							<h3 id="$2">Computational Communication Science</h3>
 							<p class="author">JaneNote</p>
 							<p class="hashTag">#Method #Communication</p>
-							<p class="abstractContent"></p>
+							<p class="abstractContent">Lorem ipsum</p>
 						</div>
 					</div>
 
@@ -223,7 +220,7 @@
                         <img src="https://images.pexels.com/photos/2726370/pexels-photo-2726370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
                         <div class="abstract">
                             <h3 id="$1">Recommender System</h3>
-                            <p class="author">Jane</p>
+                            <p class="author">JaneNote</p>
                             <p class="hashTag">#</p>
                             <p class="abstractContent">The Netflix recommender system, taxonomy, algrithms at a glance, build a recommender system.</p>
                         </div>
