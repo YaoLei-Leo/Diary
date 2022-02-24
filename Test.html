@@ -39,6 +39,25 @@
                 color: #336699;
             }
 
+            header #translate {
+                font-size: 1.4rem;
+                margin-top: 1.2rem;
+                color: #336699;
+            }
+
+            header #translate button {
+                font-size: 1rem;
+                border: none;
+                color: #336699;
+                background-color: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            header #translate button:hover {
+                cursor: pointer;
+            }
+
             .main {
                 padding: 0 2rem;
                 margin: 0 2rem;
@@ -101,6 +120,15 @@
 
             .main .rightPanel .markdownContent button:hover {
                 cursor: pointer;
+            }
+
+            .main .rightPanel .card {
+                float: left;
+                background-color: white;
+                border-radius: 4px;
+                margin: 0rem 1rem 1rem 0rem;
+                width: 25rem;
+                height: 33rem;
             }
 
             .main .rightPanel .markdownContent zero-md {
@@ -166,21 +194,27 @@
         </style>
         <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="language.js"></script>
     </head>
     <body>
         <header>
             <p id="logo">Leo-Jane</p>
-            <p id="head">Note - Leo</p>
+            <p id="head">Recent Posts</p>
+            <div id="translate">
+                <button id="chinese">中</button>
+                <span>|</span>
+                <button id="english">EN</button>
+            </div>
         </header>
         <div class="main">
             <div class="leftPanel">
                 <div class="navList">
                     <ul>
-                        <li><a href="../">Recent Posts</a></li>
-                        <li><a href="../LeoDiary/LeoDiary.html">Leo's Diary</a></li>
-                        <li><a href="../JaneDiary/JaneDiary.html">Jane's Diary</a></li>
-                        <li id="selected"><a href="./LeoNote.html">Leo's Note</a></li>
-                        <li><a href="../JaneNote/JaneNote.html">Janes' Note</a></li>
+                        <li id="selected"><a href="./">Recent Posts</a></li>
+                        <li><a href="./LeoDiary/LeoDiary.html">Leo's Diary</a></li>
+                        <li><a href="./JaneDiary/JaneDiary.html">Jane's Diary</a></li>
+                        <li><a href="./LeoNote/LeoNote.html">Leo's Note</a></li>
+                        <li><a href="./JaneNote/JaneNote.html">Janes' Note</a></li>
                     </ul>
                 </div>
 
@@ -190,28 +224,44 @@
                     <button>Back</button>
                     <hr>
                     <!-- Markdown insert position -->
-					<zero-md src="Survival Analysis.md" id="5" style="display: none;"></zero-md>
-					<zero-md src="ShortTandemRepeat.md" id="4" style="display: none;"></zero-md>
-					<zero-md src="VennPlot.md" id="3" style="display: none;"></zero-md>
-                    <zero-md src="CommandSummary.md" id="2" style="display: none;"></zero-md>
-                    <zero-md src="MitochondrialGenetics.md" id="1" style="display: none;"></zero-md>
+					<zero-md src="./JaneNote/Handbook_css.md" id="11" style="display: none;"></zero-md>
+					<zero-md src="./LeoDiary/20220120.md" id="10" style="display: none;"></zero-md>
+					<zero-md src="./LeoNote/ShortTandemRepeat.md" id="9" style="display: none;"></zero-md>
+					<zero-md src="./LeoDiary/20220119.md" id="8" style="display: none;"></zero-md>
+                    <zero-md src="./JaneNote/AiDigitalMedia.md" id="7" style="display: none;"></zero-md>
+					<zero-md src="./LeoNote/VennPlot.md" id="6" style="display: none;"></zero-md>
+                    <zero-md src="./JaneNote/Recommender_system.md" id="5" style="display: none;"></zero-md>
+                    <zero-md src="./LeoNote/CommandSummary.md" id="4" style="display: none;"></zero-md>
+                    <zero-md src="./LeoNote/MitochondrialGenetics.md" id="3" style="display: none;"></zero-md>
+                    <zero-md src="./LeoDiary/20220116.md" id="2" style="display: none;"></zero-md>
+                    <zero-md src="./LeoDiary/20220108.md" id="1" style="display: none;"></zero-md>
                 </div>
                 <div class="cardIndex">
                     <!-- Card insert position -->
 					<div class="card">
-						<img src="Survival Analysis_src/KM_plot.png">
+						<img src="./JaneNote/Handbook_css_src/rs6250_thinkstockphotos-495070930-low.jpeg">
 						<div class="abstract">
-							<h3 id="$5">Survival Analysis</h3>
-							<p class="author">LeoNote</p>
-							<p class="hashTag">#Survival analysis</p>
-							<p class="abstractContent">My note of survival analysis with R code</p>
+							<h3 id="@11">Handbook of computational social science</h3>
+							<p class="author">JaneNote</p>
+							<p class="hashTag">#Computational social science #Digital trace</p>
+							<p class="abstractContent">DIGITAL TRACE DATA: Modes of data collection, applications, and errors at a glance</p>
+						</div>
+					</div>
+
+					<div class="card">
+						<img src="https://cdn.images.express.co.uk/img/dynamic/59/590x/Windows-10-Blue-Screen-of-Death-1375284.jpg?r=1608706281236">
+						<div class="abstract">
+							<h3 id="@10">2022 Jan 20 computer emergency!</h3>
+							<p class="author">LeoDiary</p>
+							<p class="hashTag">#Computer #Error #Slovment</p>
+							<p class="abstractContent">前天windows更新突然停止，導致電腦無法啓動。今天用了九牛二虎之力終於完全解決了這個問題。</p>
 						</div>
 					</div>
 
 					<div class="card">
 						<img src="https://ib.bioninja.com.au/_Media/str_med.jpeg">
 						<div class="abstract">
-							<h3 id="$4">Short Tandem Repeat</h3>
+							<h3 id="@9">Short Tandem Repeat</h3>
 							<p class="author">LeoNote</p>
 							<p class="hashTag">#STR #Summary</p>
 							<p class="abstractContent">What is short tandem repeat ? What STR will cause ? My summary about short tandem repeats in Neuromuscular diseases.</p>
@@ -219,9 +269,29 @@
 					</div>
 
 					<div class="card">
-						<img src="VennPlot_src/TripleVennPlot.png">
+						<img src="https://images.pexels.com/photos/5985670/pexels-photo-5985670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
 						<div class="abstract">
-							<h3 id="$3">Venn Plot using R</h3>
+							<h3 id="@8">2022 Jan 19 Diary</h3>
+							<p class="author">LeoDiary</p>
+							<p class="hashTag">#Diary</p>
+							<p class="abstractContent">Today I got up around 11 am， and again arrive at office around 12. I always want to get up earlier. I begin my Short Tandem Repeats pipieline today. It seems I need read a lot of paper to choose 3 good tools.</p>
+						</div>
+					</div>
+
+					<div class="card">
+						<img src="https://righttoinformation.wiki/_media/explanations/rti-information.jpg">
+						<div class="abstract">
+							<h3 id="@7">Computational Communication Science</h3>
+							<p class="author">JaneNote</p>
+							<p class="hashTag">#Method #Communication</p>
+							<p class="abstractContent"></p>
+						</div>
+					</div>
+
+					<div class="card">
+						<img src="LeoNote/VennPlot_src/TripleVennPlot.png">
+						<div class="abstract">
+							<h3 id="@6">Venn Plot using R</h3>
 							<p class="author">LeoNote</p>
 							<p class="hashTag">#</p>
 							<p class="abstractContent">Powerpoint default venn plot method does not offer proportional venn circles. Therefore, I use R package eulerr to acheive this aim.</p>
@@ -229,9 +299,19 @@
 					</div>
 
                     <div class="card">
+                        <img src="https://images.pexels.com/photos/2726370/pexels-photo-2726370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        <div class="abstract">
+                            <h3 id="@5">Recommender System</h3>
+                            <p class="author">JaneNote</p>
+                            <p class="hashTag">#</p>
+                            <p class="abstractContent">The Netflix recommender system, taxonomy, algrithms at a glance, build a recommender system.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
                         <img src="https://images.pexels.com/photos/207580/pexels-photo-207580.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
                         <div class="abstract">
-                            <h3 id="$2">Command Summary</h3>
+                            <h3 id="@4">Command Summary</h3>
                             <p class="author">LeoNote</p>
                             <p class="hashTag">#command #bash</p>
                             <p class="abstractContent">Bash command daily usage.</p>
@@ -241,10 +321,30 @@
                     <div class="card">
                         <img src="https://media.istockphoto.com/photos/mitochondria-microbiology-picture-id521497656?k=20&m=521497656&s=612x612&w=0&h=TmPZ6vXhFdFSoM1FlCqKVPIUhNnUz3QQ2br6sdaLjL8=">
                         <div class="abstract">
-                            <h3 id="$1">Mitochondria Genetics</h3>
+                            <h3 id="@3">Mitochondria Genetics</h3>
                             <p class="author">LeoNote</p>
                             <p class="hashTag">#</p>
                             <p class="abstractContent">In MDA, mitochondrial correlated Neuromuscular diseases have following type.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/1089440/pexels-photo-1089440.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                        <div class="abstract">
+                            <h3 id="@2">2022Jan16 Diary</h3>
+                            <p class="author">LeoDiary</p>
+                            <p class="hashTag">#HTML #CSS #Javascript</p>
+                            <p class="abstractContent">At this weekend, I finished most works of my diary website development, including the structure, color theme, and javascript development.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        <div class="abstract">
+                            <h3 id="@1">2022Jan8 Diary</h3>
+                            <p class="author">LeoDiary</p>
+                            <p class="hashTag">#HTML</p>
+                            <p class="abstractContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
                         </div>
                     </div>
                     
@@ -256,17 +356,17 @@
         <script>
             $(function(){
                 $(".abstract h3").click(function(){
-                    /*alert($(this).attr("class"));*/
+                    /*alert($(this).attr("id"));*/
                     /*alert($(this).parent().parent().attr("class"));*/
                     /*var idNum = $(this).attr("id").replace("$","@");
                     alert(idNum);*/
-                    var mdID = $(this).attr("id").replace("$","");
+                    var mdID = $(this).attr("id").replace("@","");
                     $(".cardIndex").hide();
                     $(".markdownContent").show();
                     $("#".concat(mdID)).show();
                 });
             });
-
+    
             $(function(){
                 $(".markdownContent button").click(function(){
                     $(".markdownContent").children("zero-md").hide();
