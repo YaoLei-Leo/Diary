@@ -9,7 +9,7 @@ Survival analysis: Y = Time & Event occurs
     - Time = T
       - Event = 0 is no; 1 is yes
 
-<center> <img src="https://render.githubusercontent.com/render/math?math=y = Surv(t,e)"> </center>
+<center> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;y = Surv(t,e)"> </center>
 
 ## What is censoring
 
@@ -19,12 +19,12 @@ Censoring:
 
 ## Survival function
 
-<center> <img src="https://render.githubusercontent.com/render/math?math=S(t) = P(T>t)"> </center>
+<center> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;S(t) = P(T>t)"> </center>
 
 (2) it means the probability of survival time beyond time T.
-<center> <img src="https://render.githubusercontent.com/render/math?math=Hazard(haz) = P(T<t+\delta | T>t)"> </center>
+<center> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;Hazard(haz) = P(T<t+\delta | T>t)"> </center>
 (3) means the probability of dying in next δ time given still alive now.
-<center> <img src="https://render.githubusercontent.com/render/math?math=Hazard Ratio(H.R.) = \frac{Haz(x=1)}{Haz(x=0)}"> </center>
+<center> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;Hazard Ratio(H.R.) = \frac{Haz(x=1)}{Haz(x=0)}"> </center>
 (4) means the hazard to someone exposed to hazard to someone not exposed.
 
 
@@ -70,20 +70,20 @@ Kaplan-Meier model (non-parametric); Exponential model (parametric); Cox regress
 | Time | Risk | Died |       Haz        |       1-Haz       |                          Surv=S(t)                           |
 | :--: | :--: | :--: | :--------------: | :---------------: | :----------------------------------------------------------: |
 |  0   |  12  |  0   |        0         |         1         |                              1                               |
-|  2   |  12  |  1   | <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{12}"> | <img src="https://render.githubusercontent.com/render/math?math=\frac{11}{12}"> |                  <img src="https://render.githubusercontent.com/render/math?math=\frac{11}{12}"> = 0.917                   |
-|  6   |  10  |  2   | <img src="https://render.githubusercontent.com/render/math?math=\frac{2}{10}"> | <img src="https://render.githubusercontent.com/render/math?math=\frac{8}{10}">  |         <img src="https://render.githubusercontent.com/render/math?math=\frac{11}{12}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{8}{10}"> = 0.733         |
-|  7   |  8   |  1   | <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{8}">  |  <img src="https://render.githubusercontent.com/render/math?math=\frac{7}{8}">  | <img src="https://render.githubusercontent.com/render/math?math=\frac{11}{12}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{8}{10}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{7}{8}"> = 0.642 |
-|  15  |  6   |  2   | <img src="https://render.githubusercontent.com/render/math?math=\frac{2}{6}">  |  <img src="https://render.githubusercontent.com/render/math?math=\frac{4}{6}">  | <img src="https://render.githubusercontent.com/render/math?math=\frac{11}{12}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{8}{10}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{7}{8}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{4}{6}"> = 0.428 |
-|  16  |  4   |  1   | <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{4}">  |  <img src="https://render.githubusercontent.com/render/math?math=\frac{3}{4}">  | <img src="https://render.githubusercontent.com/render/math?math=\frac{11}{12}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{8}{10}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{7}{8}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{4}{6}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{3}{4}"> = 0.321 |
-|  27  |  3   |  1   | <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{3}">  |  <img src="https://render.githubusercontent.com/render/math?math=\frac{2}{3}">  | <img src="https://render.githubusercontent.com/render/math?math=\frac{11}{12}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{8}{10}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{7}{8}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{4}{6}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{3}{4}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{2}{3}"> = 0.214 |
-|  30  |  2   |  1   | <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{2}">  |  <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{2}">  | <img src="https://render.githubusercontent.com/render/math?math=\frac{11}{12}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{8}{10}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{7}{8}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{4}{6}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{3}{4}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{2}{3}"> * <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{2}"> = 0.107 |
-|  32  |  1   |  1   | <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{1}">  |         0         |                              0                               |
+|  2   |  12  |  1   | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{1}{12}"> | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{11}{12}"> |                  <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{11}{12}"> = 0.917                   |
+|  6   |  10  |  2   | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{2}{10}"> | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{8}{10}">  |         <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{11}{12}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{8}{10}"> = 0.733         |
+|  7   |  8   |  1   | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{1}{8}">  |  <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{7}{8}">  | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{11}{12}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{8}{10}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{7}{8}"> = 0.642 |
+|  15  |  6   |  2   | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{2}{6}">  |  <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{4}{6}">  | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{11}{12}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{8}{10}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{7}{8}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{4}{6}"> = 0.428 |
+|  16  |  4   |  1   | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{1}{4}">  |  <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{3}{4}">  | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{11}{12}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{8}{10}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{7}{8}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{4}{6}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{3}{4}"> = 0.321 |
+|  27  |  3   |  1   | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{1}{3}">  |  <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{2}{3}">  | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{11}{12}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{8}{10}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{7}{8}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{4}{6}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{3}{4}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{2}{3}"> = 0.214 |
+|  30  |  2   |  1   | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{1}{2}">  |  <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{1}{2}">  | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{11}{12}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{8}{10}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{7}{8}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{4}{6}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{3}{4}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{2}{3}"> * <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{1}{2}"> = 0.107 |
+|  32  |  1   |  1   | <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\frac{1}{1}">  |         0         |                              0                               |
 
 
 
 ### Kaplan Meier curve
 
-<img src="./Survival Analysis_process_src/KM_plot.png">
+![KMplot](C:\Users\MichaelLei\Desktop\KM_plot.png)
 
 ```R
 library(ggfortify)
@@ -102,17 +102,17 @@ p <- autoplot(fit, surv.colour = 'blue', censor.colour = 'red') + theme_classic(
 
 ## Exponential Model (parametric model)
 
-The exponential survival model assume constant hazard <img src="https://render.githubusercontent.com/render/math?math=\lambda(t) = \lambda">.
+The exponential survival model assume constant hazard <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\lambda(t) = \lambda">.
 
 ### Survival function
 
-<center> <img src="https://render.githubusercontent.com/render/math?math=S(t)= e^{-\lambda t}"> </center>
+<center> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;S(t)= e^{-\lambda t}"> </center>
 
 ### Model fitting
 
-<img src="./Survival Analysis_process_src/Exponential_model.png">
+![Exponential curve](C:\Users\MichaelLei\Desktop\Exponential_model.png)
 
-<center> <img src="./Survival Analysis_process_src/Exponential_model_details.png"> </center>
+![Exponential model details](C:\Users\MichaelLei\Desktop\Exponential_model_details.png)
 
 ```R
 my_data = list(c(0, 2, 6, 7, 15, 16, 27, 30), c(1, 0.917, 0.733, 0.642, 0.428, 0.321, 0.214, 0.107))
@@ -141,13 +141,13 @@ ggplot() + geom_line(aes(x=dat$x, y=dat$px)) + geom_point(aes(my_data$time, my_d
 - Censoring is non informative
 - Survival time are independent between samples
 - Hazard are proportional (H.R. is constant over time)
-- <img src="https://render.githubusercontent.com/render/math?math=ln(Haz)"> is linear function of parameters
+- <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;ln(Haz)"> is linear function of parameters
 -  Value of parameters don't change over time
-- Baseline hazard (<img src="https://render.githubusercontent.com/render/math?math=h_0(t)">) is unspecified.
+- Baseline hazard (<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;h_0(t)">) is unspecified.
 
 ### Hazard unction
 
-<center> <img src="https://render.githubusercontent.com/render/math?math=h(t)=h_0(t)*e^{b_1x_1+b_2x_2+...+b_n*x_n}"> </center>
+<center> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;h(t)=h_0(t)*e^{b_1x_1+b_2x_2+...+b_n*x_n}"> </center>
 
-<center> <img src="https://render.githubusercontent.com/render/math?math=ln(h(t)) = ln(h_0(t)) + b_1x_1+b_2x_2+...+b_n*x_n"> </center>
+<center> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;ln(h(t)) = ln(h_0(t)) + b_1x_1+b_2x_2+...+b_n*x_n"> </center>
 
